@@ -3,9 +3,18 @@ import './App.css';
 import './Component/MoviesData'
 import {useState} from 'react'
 import { MoviesData } from './Component/MoviesData';
-import AddMouvie from './Component/AddMovies'
+import AddMovie from './Component/AddMovies'
 import MoviesList from './Component/MoviesList';
 import Navbarr from './Component/Navbarr';
+import React from "react";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Description from './Description';
 
 
 function App() {
@@ -18,14 +27,30 @@ function App() {
   }
 
   return (
-    
+   
     <div className="App">
-      {/* <header className="App-header">></header> */}
+          <Router>
+          <Switch>
+          <Route  path="/about">
+          <Navbarr name={name} setName={setName} ratingSearch={ratingSearch} setRatingSearch={setRatingSearch}/><br/>
 
-<Navbarr name={name} setName={setName} ratingSearch={ratingSearch} setRatingSearch={setRatingSearch}/><br/>
-<AddMouvie AddFilm={AddFilm}/>
+           <Description/>
+          </Route>
+          <Route path="/users">
+           
+          </Route>
+          <Route exact path="/">
+          <Navbarr name={name} setName={setName} ratingSearch={ratingSearch} setRatingSearch={setRatingSearch}/><br/>
+<AddMovie AddFilm={AddFilm}/>
     <MoviesList movies={movies} name={name} ratingSearch={ratingSearch}/>
     
+
+          </Route>
+        </Switch>
+
+</Router>
+      {/* <header className="App-header">></header> */}
+
     
   
     </div>
