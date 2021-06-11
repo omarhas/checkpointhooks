@@ -1,0 +1,28 @@
+.App {
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    color: black;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.App-header {
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(173, 136, 136);
+}
+
+.App-link {
+    color: #61dafb;
+}
