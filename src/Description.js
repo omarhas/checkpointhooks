@@ -1,9 +1,8 @@
 import React from 'react'
-
 function Description() {
     return (
-        <div>
-              <h2> Welcome</h2>
+        <div className='des'>
+              <h1>WELCOME </h1>
         </div>
     )
 }
